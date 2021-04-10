@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #1b2029;
+    font-weight: 500;
+    color: white;
+}
+
+main {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #8880fe;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 0;
+}
+
+.social-media img {
+    width: 36px;
+}
+
+.social-media a:not(:first-child) {
+    margin-left: 3rem;
+}
+
+
+.alternative {
+    margin-top: 1rem;
+}
+
+.alternative span {
+    position: relative;
+    font: 1.1rem 400;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.alternative span::before, .alternative span::after {
+    content: '';
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 1px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+.alternative span::after {
+    left: 50px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+form label span {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+form input {
+    margin-top: 1rem;
+    padding: 0 .5rem;
+    height: 50px;
+    width: 300px;
+    background: #161923;
+    border: 1px solid #040b18;
+    outline: none;
+    font-size: 1rem;
+    border-radius: .5rem;
+    color: rgba(166, 166, 166);
+}
+
+button {
+    margin-top: 4rem;
+    padding: .5rem 0;
+    width: 50%;
+    background: #6c63ff;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background: #5952d4;;
+}
+
+section.images {
+    padding: 4rem;
+    display: flex;
+    align-items: flex-end;
+    width: 50vw;
+}
+
+.images img {
+    width: 100%;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #e8cbc0, #6C64ED);
+    clip-path: circle(40% at 100% 80%);
+    z-index: -1;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .images img {
+        width: 110%;
+    }
+
+    .circle {
+        clip-path: circle(35% at 100% 80%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 100vw;
+    }
+    
+    section.images {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    main {
+        padding: 2rem 0;
+    }
+    main h1 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .alternative span {
+        font-size: .8rem;
+    }
+
+    .alternative span::before, .alternative span::after {
+        width: 100px;
+        right: 40px;
+    }
+
+    .alternative span::after {
+        left: 40px;
+    }
+
+    form input {
+        width: 280px;
+    }
+
+    form label span {
+        margin-top: 1rem;
+    }
+
+    form label span, form button {
+        font-size: 1rem;
+    }    
+
+    button {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
